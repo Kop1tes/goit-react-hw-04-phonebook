@@ -33,7 +33,7 @@ export default function Phonebook() {
     };
 
     const visibleContacts = useMemo(() => {
-        return contacts.filter(contact => contact.name.toLowerCase().includes(filter));
+        return contacts.filter(contact => contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()));
     }, [filter, contacts]);
 
     return (
